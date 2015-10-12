@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Name"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Enter your Name" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Password"
+        android:layout_below="@+id/Name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Enter your Password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/add"
+        android:layout_below="@+id/Password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="addButtonClicker" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/delete"
+        android:layout_alignTop="@+id/add"
+        android:layout_alignRight="@+id/Password"
+        android:layout_alignEnd="@+id/Password"
+        android:onClick="deleteButtonClicker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/db"
+        android:layout_marginTop="163dp"
+        android:layout_below="@+id/add"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/_id"
+        android:layout_below="@+id/update"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/update"
+        android:layout_below="@+id/Password"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
