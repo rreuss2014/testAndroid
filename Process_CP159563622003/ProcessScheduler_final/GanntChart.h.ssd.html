@@ -1,0 +1,139 @@
+<table boder="1" width=600 bgcolor=Cyan cellpadding=5 cellspacing=1 bordercolor=silver align=center style="color:black;background-color:#40484F;border-width:1px;border-style:Inset;font-size:10pt;height:500px;width:600px;">
+	<tr vlign="center" vlign="top">
+		<td bgcolor=black align=center>
+			<font color=#95FA4B size=+1 >Source Code Documentation for C:\Documents and Settings\Alphanso\Desktop\ProcessScheduler\GanntChart.h </font>
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=darkblue >Author: </font></b>
+			
+ Alphanso Walker & Anthony Spark Piris
+
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ GanntChart.h contains the class and functions needed to implement the display of the
+  Gannt Chart.
+
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ GanntChart
+
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ This class encapsulates all the printing and other logistics regarding displaying the
+  Gannt Chart.  It computes all the necessary data needed from the ProcessScheduler's Processtable
+  and AlgorithmParameters members.  The purpose of the start and end iterators is to handle
+  algorithms such as the Shortest Time Remaining First and Round Robin algorithms where processes appear
+  in the chart more than once (due to switching).
+
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ GanntChart::GanntChart 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Constructor that takes in a ProcessScheduler class to obtain the the processtable
+		   info and the algorithm's parameters given at runtime 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ GanntChart::DisplayChart 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Displays the chart (the times when the processes start, end/switch and the csp's) 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ GanntChart::DisplayTable 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Displays the table containing the wait time and turnaround time information 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ GanntChart::DisplaySummary 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Displays the runtime summary (Total run time of the simulation in terms of ticks
+		   and the time spent in overhead/switching processes)
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ Calculate() 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ A free function whose purpose is to calculate the wait time and turnaround time.
+   This is really used for the pre-emptive algorithms since, in our implementation, processes appear
+   twice because they were ran then switched.
+
+
+		</td>
+	</tr>
+	<tr vlign="center" vlign="top">
+		<td bgcolor=black align=left>
+			<font color=#95FA4B size=-1 > &copy;Alphasm 2002-infinity.</font>
+		</td>
+	</tr>
+</table>

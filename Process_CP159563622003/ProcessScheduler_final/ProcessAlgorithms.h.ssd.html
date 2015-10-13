@@ -1,0 +1,381 @@
+<table boder="1" width=600 bgcolor=Cyan cellpadding=5 cellspacing=1 bordercolor=silver align=center style="color:black;background-color:#40484F;border-width:1px;border-style:Inset;font-size:10pt;height:500px;width:600px;">
+	<tr vlign="center" vlign="top">
+		<td bgcolor=black align=center>
+			<font color=#95FA4B size=+1 >Source Code Documentation for C:\Documents and Settings\Alphanso\Desktop\ProcessScheduler\ProcessAlgorithms.h </font>
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=darkblue >Author: </font></b>
+			
+ Alphanso Walker & Anthony Spark Piris
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ ProcessAlgorithms.h file; contains the classes used for implementing the algorithms
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ DegreeOfMultiprogramming
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Handles the runnable queue used in implementing the Round Robin Algorithm.  
+  If there's enough memory available (i.e., the degree has not been reached), processes are
+  inserted into the queue via the class' methods
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ DegreeOfMultiprogramming::DegreeOfMultiProgramming 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Constructor which takes in the degree of multiprogramming as a parameter 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ DegreeOfMultiprogramming::IsRunnable 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ This method determines whether there's enough space in the queue to store
+		   another process.  It returns a boolean value.
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ DegreeOfMultiprogramming::Insert 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ This method accepts a process as a parameter and inserts it into the queue.  
+		   This is more or less a wrapper for the queue's push_back function
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ DegreeOfMultiprogramming::Rotate 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ This method rotates the members of the queue so that the next process in line 
+		   is placed in the front and so forth.
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ DegreeOfMultiprogramming::Remove 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ This method removes the process that's in front of the queue.  This is mainly used
+		    to pop off the newly completed process and make room for another one.  It returns a copy
+			of the removed process for later calculations.  If there's nothing inside, it'll return a
+			default process control block (with everything initialized to zero).
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ DegreeOfMultiprogramming::Size 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Rather self explanitory, this method returns the size of the queue (which
+		    really means, how much stuff is currently in it) 
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ DegreeOfMultiprogramming::GetRunnableProcesses
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ A getter function to access the queue for processing outside the class 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ Struct SchedulingAlgorithmParameters
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ This struct contains the necessary parameters needed for the process scheduler and the
+  algorithms being simulated such as the context switch penalty, current time (clock tick) and the
+  degree of multiprogramming (previously defined as a class of it's own).
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ SchedulingAlgorithm
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ This serves as the base class from which all the algorithms are derived.  Contains the
+  basic functions that is common to all algorithms such as updating the process table on completion
+  and if all processes in our table are completed.
+
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ RunAlgorithm
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ A pure vitual method in which all derived algorithm classes must define.  Makes sense
+		  since each algorithm behaves in it's own special (annoying) way. This takes in a ProcessTable, SchedulingAlgorithmParameters and a vector
+		  of control blocks.
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ GetNewlyReadyProcesses
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ A pure vitual method that all derived algorithms must define as well.  This is simply because
+		  every algorithm has their own (sick) tastes in how they get the next ready process from the process table at the
+		  time they were submitted.  This takes in a ProcessTable, SchedulingAlgorithmParameters and a vector
+		  of control blocks.  Should return an integer value representing the number of ready processes that were
+		  submitted at that tick. 
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ ContextSwitch
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ A virtual method that is optional for derived algorithms to override.  Some algorithms (the preemptive
+		  picky little pains in the ...)  do things differently, hence this leeway is given for them.
+		This takes in a ProcessTable, SchedulingAlgorithmParameters and a vector  of control blocks. 
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ OnProcessComplete
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ A method that sets the members of the completed process accordingly (such as total run time, end time,
+		as well as the state).  This takes in an iterator vector of control blocks and a SchedulingAlgorithmParameters object.
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ ProcessCompleted
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Boolean method that takes and checks a ProcessTable to see if all the processes for the simulation have been completed.
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#EA9A3D >Method:</font></b>
+			
+ UpdateProcesses
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ Takes in a ProcessTable and a vector of control blocks in order to update the information regarding the completed
+		  processes in the vector and send it to the ProcessTable.
+		
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ FirstComeFirstServe
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ the class that implements the first come first serve algorithm.  The methods are overidded accordingly
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ ShortestJobFirst
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ the class that implements the shortest job first algorithm.  The methods are overidded accordingly
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ ShortestTimeRemaingNext
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ the class that implements the Shortest Time Remaing Next algorithm.  The methods are overidded accordingly
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=blue >Class:</font></b>
+			
+ RoundRobin
+
+		</td>
+	</tr>
+	<tr vlign="top" height=40>
+		<td bgcolor=gainsboro align=left height=40 vlign="top">
+			<b><font color=#2A6518 >Description:</font></b>
+			
+ the class that implements the Round Robin algorithm.  The methods are overidded accordingly
+
+		</td>
+	</tr>
+	<tr vlign="center" vlign="top">
+		<td bgcolor=black align=left>
+			<font color=#95FA4B size=-1 > &copy;Alphasm 2002-infinity.</font>
+		</td>
+	</tr>
+</table>
