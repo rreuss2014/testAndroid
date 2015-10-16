@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/lifeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lifeLinearLayout"
+        android:layout_marginBottom="74dp"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/highScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lifeLinearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="29dp"
+        android:text="@string/hit_score"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lifeLinearLayout"
+        android:layout_alignParentLeft="true"
+        android:text="@string/misses"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/themole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="198dp"
+        android:src="@drawable/mole" />
+
+    <ImageView
+        android:id="@+id/topmissingView"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+         />
+
+    <ImageView
+        android:id="@+id/bottommissingView"
+        android:layout_width="1199dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button1" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/themole"
+        android:layout_alignStart="@+id/themole"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="LEVEL "
+        android:id="@+id/tvLevel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="@+id/lifeLinearLayout"
+        android:layout_alignParentLeft="@+id/lifeLinearLayout"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:id="@+id/backActivity"
+        android:layout_above="@+id/lifeLinearLayout"
+        android:layout_alignRight="@+id/pBar"
+        android:layout_alignEnd="@+id/pBar"
+        android:onClick="backActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:id="@+id/finish"
+        android:layout_above="@+id/highScoreTextView"
+        android:layout_alignRight="@+id/lifeLinearLayout"
+        android:onClick="finishGame"
+        android:layout_alignEnd="@+id/lifeLinearLayout" />
+
+
+</RelativeLayout>
